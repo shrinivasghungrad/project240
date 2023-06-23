@@ -47,19 +47,16 @@
 //   );
 // };
 
-
-
 // import React from "react";
 // below example of jsx attribute in jsx class is use as className
-
 
 // const App =()=>{
 //   return(<>
 //     <div>
 //       <h1 className="head">hi react js</h1>
 //       <h1 id="head1"> react js</h1>
-//      <h3 style={{backgroundColor:"red"}}>hi </h3>   
-//      <h4 style={{fontSize:"20px"}}>hi </h4> 
+//      <h3 style={{backgroundColor:"red"}}>hi </h3>
+//      <h4 style={{fontSize:"20px"}}>hi </h4>
 //      {/* /* other than pixel if you want to give any other unit you have to give in string like " "  */}
 //     </div>
 //     {}
@@ -68,23 +65,68 @@
 // };
 // export default App;
 
-
-
-
-
 // ex 2 start below
 
-import React,  {  Component } from 'react';
-import Child from "./Child";
+// import React,  {  Component } from 'react';
+// import Child from "./Child";
 
-export default class App extends Component {
-  render() {
-    return (<>
-      <div>App</div>
-      <Child/>
-      </>
-    )
-  }
-}     //ex2 end
+// export default class App extends Component {
+//   render() {
+//     return (<>
+//       <div>App</div>
+//       <Child/>
+//       </>
+//     )
+//   } //
+// }     //ex2 end
 
+//
+
+// //new example
+// import React, { Component } from "react";
+// import Child from "./Child";
+
+// import "./style.css";
+// import Home from "./Home";
+
+// export default class App extends Component {
+//   render() {
+//     return (
+//       <div>
+//         <Child/>
+//         <Home/>
+        
+//       </div>
+//     );
+//   }
+// }
+
+//new example
+// import React, { Component } from 'react'
+// import Child from './Child'
+
+// export default class App extends Component {
+//   render() {
+//     return (
+//       <div>App</div>
+
+//     )
+//   }
+// }
+
+//props start which is used to send data from parent to child
+//destructing
+
+// import React, { Component } from 'react';
+// import Child from './Child';
+
+// export default class App extends Component {
+//   render() {
+//     return (
+//       <div>
+//         <Child name="shri" subject="react" salary="1cr"/>
+//       </div>
+//     );
+// }
+// };
 

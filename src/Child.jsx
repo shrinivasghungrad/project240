@@ -1,84 +1,329 @@
-
 // ex 2start below
 
+// import React, { Component } from 'react';
+// import "./style.css"
+
+// export default class Child extends Component {
+//   render() {
+//     return (
+//       <>
+//       <section>
+//         <article>
+
+//             <table>
+
+//                    <thead>
+//                      <tr>
+//                         <th>NAME</th>
+//                         <th>SUBJECT</th>
+//                         <th>CITY</th>
+//                         <th>gender</th>
+//                     </tr>
+//                    </thead>
+
+//                     <tbody>
+//                         <tr>
+//                             <td>ram</td>
+//                             <td>react</td>
+
+//                             <td>pune</td>
+//                             <td>male</td>
+//                         </tr>
+//                         <tr>
+//                             <td>sham</td>
+//                             <td>react</td>
+
+//                             <td>pune</td>
+//                             <td>male</td>
+//                         </tr>
+//                         <tr>
+//                             <td>raju</td>
+//                             <td>react</td>
+
+//                             <td>pune</td>
+//                             <td>male</td>
+//                         </tr>
+//                         <tr>
+//                             <td>balu</td>
+//                             <td>react</td>
+
+//                             <td>pune</td>
+//                             <td>male</td>
+//                         </tr>
+
+//                     </tbody>
+
+//             </table>
+//         </article>
+//       </section>
+//       </>
+//     )
+//   }
+// }    //ex2 end
+
+// react hook following ARE EXAMPLE OF FUNCTIONAL BASED COPMPONENT TO CONVER INTO STATFULL COMPONENT
+
+// import React ,{useState} from "react";
+// import PRODUCTS from "./products.json";
+// import "./style.css";
+// import Child from './Child';
+
+// const Child = () => {
+//   let [employees, setEmployees]=useState({products:PRODUCTS});
+
+//   return (
+//     <> <section id="mainblock">
+//             <article>
+
+//                  <table>
+//                           <tr>
+//                         <thead>
+//                              <th>NAME</th>
+//                              <th>SUBJECT</th>
+//                              <th>CITY</th>
+//                              <th>gender</th>
+//                          </tr>
+//                         </thead>
+
+//                          <tbody>
+//                              <tr>
+//                                  <td>ram</td>
+//                                  <td>react</td>
+
+//                                  <td>pune</td>
+//                                  <td>male</td>
+//                              </tr>
+//                              <tr>
+//                                  <td>sham</td>
+//                                  <td>react</td>
+
+//                             <td>pune</td>
+//                                  <td>male</td>
+//                              </tr>
+//                              <tr>
+//                                <td>raju</td>
+//                                  <td>react</td>
+//                                  <td>pune</td>
+//                                 <td>male</td>
+//                              </tr>
+//                              <tr>
+//                                <td>balu</td>
+//                                  <td>react</td>
+
+//                                 <td>pune</td>
+//                                 <td>male</td>
+//                             </tr>
+
+//                          </tbody>
+
+//                  </table>
+//             </article>
+//            </section>
+
+//          </>
+
+//   )
+// }
+
+// export default Child;
+
+// how we mANIPULATE STATE IN CLASS BASECMPONENT
+// AND useState
+
+// import React, { Component } from 'react'
+
+// export default class Child extends Component {
+//   state={
+//     subject:"react",
+//     trainer:"vivek",
+//   };
+//   changeName=()=>{
+//     this.setState({subject:"web",trainer:"shri"})
+//   };
+//   render() {
+//     return (
+
+//       <div>
+
+//       <h1>{this.state.subject}</h1>
+//       <h1>{this.state.trainer}</h1>
+//       <button onClick={this.changeName}>change</button>
+
+//       </div>
+
+//     );
+//   }
+// }
+
+//functional way how we can manipulate state in functional way
+
+// import React, { useState } from 'react';
+
+// const Child = () => {
+//   let [state, setState ]=useState({subject:"react",trainer:"abhi"});
+
+//   let changeName=()=>{
+//     setState({subject:"webtech",trainer:"a"})
+//   };
+
+//   let changeName1=()=>{
+//     setState({subject:"react",trainer:"vivek"})
+//   };
+
+//   return (
+//     <div id="div">
+//       <h1>
+//         {state.trainer}
+//       </h1>
+//       <h1>
+//         {state.trainer}
+//       </h1>
+
+//       <button onClick={changeName}>next</button>
+//        <button onAuxClick={changeName1}>previous</button>
+//     </div>
+
+//   );
+// };
+
+// export default Child;
+
+//new exp
+
+// import React, { useState } from "react";
+
+// const Child = () => {
+//   let [state, setState] = useState({
+//     username: "yashraj",
+//   });
+
+//   let changeName1 = () => {
+//     setState({ username: "ram" });
+//   };
+//   let changeName2 = () => {
+//     setState({ userName: "shri" });
+//   };
+//   return (
+//     <div>
+//       <h1>{state.username}</h1>
+//       <button onClick={changeName1}>previous</button>
+//       <button onClick={changeName2}>next</button>
+//     </div>
+//   );
+// };
+
+// export default Child;
+
+// useState example by functional based component 
+// import React, { useState } from "react";
+// import "./style.css";
+
+// const Child = () => {
+//   let [count, setCount] = useState(0);
+
+//   let increment = () => {
+//     setCount(count + 1);
+//   };
+//   let decrement = () => {
+//     setCount(count - 1);
+//   };
+//   let reset = () => {
+//     setCount(0);
+//   };
+//   let getColor =()=>{
+//     if(count<0){
+//       return "red";
+
+//     }
+//     else  if(count>0){
+//       return "green";
+      
+//     }
+//     else {
+//       return "blue";
+      
+//     }
+//   }
+
+//   return (
+//     <div>
+
+//       <h1 style={{color:getColor (count)}}>{count}</h1>
+//       <button  onClick={increment} id="btn1" >increment</button>
+//       <button onClick={decrement} id="btn2">decrement</button>
+//       <button onClick={reset} id="btn3">reset</button>
+//     </div>
+//   );
+// };
+
+// export default Child;
+
+//end exaple
 
 
-import React, { Component } from 'react';
-import "./style.css"
+//new example 
 
-export default class Child extends Component {
-  render() {
-    return (
-      <>
-      <section>
-        <article>
-            
-                
-            
-            <table>
-              
-                   <thead>          
-                     <tr>
-                        <th>NAME</th>
-                        <th>SUBJECT</th>
-                        <th>CITY</th>
-                        <th>gender</th>
-                    </tr>
-                   </thead>
-                
-                    <tbody>
-                        <tr>
-                            <td>ram</td>
-                            <td>react</td>
-                        
-                            <td>pune</td>
-                            <td>male</td>
-                        </tr>
-                        <tr>
-                            <td>sham</td>
-                            <td>react</td>
-                            
-                            <td>pune</td>
-                            <td>male</td>
-                        </tr>
-                        <tr>
-                            <td>raju</td>
-                            <td>react</td>
-                            
-                            <td>pune</td>
-                            <td>male</td>
-                        </tr>
-                        <tr>
-                            <td>balu</td>
-                            <td>react</td>
-                          
-                            <td>pune</td>
-                            <td>male</td>
-                        </tr>
+// import { useState } from 'react';
+// import "./style.css";
 
-                    </tbody>
-                
-            </table>
-        </article>
-      </section>
-      </>
-    )
-  }
-}    //ex2 end
+// const Child = () => {
+//   let [value,setValue] =useState(0);
+//   let Increment =()=>{
+//     setValue(value + 10);
+//     setValue(value+20);
+//   };
+//   return (
+//     <div>
+//       <h1>{value}</h1>
+//       <button id='btn1'  onClick={Increment}>increment</button>
+//     </div>
+//   );
+// };
 
-// start  example 3 below /
+// export default Child;
+
+//example end in this exaple we are understand value is incresing by 20 not by 10 because 10 first declare after 20 declare means updated value for operation is 20
+
+
+// new example
+
+// import React from 'react'
+// import { useState } from 'react'
+
+// const Child = () => {
+//   let [value,setValue] =useState(0);
+//   let increment= ()=>{
+//     setValue(value => value + 10);
+//     setValue(value => value + 20);
+//   }
+//   return (
+//     <div>
+//       <h1>{value}</h1>
+//       <button onClick={increment}increment>inrement</button>
+//     </div>
+//   );
+// };
+
+// export default Child;
+//new example end
 
 
 
+//props start which is used to send data from parent to child
+//destructing
+// import React from 'react';
 
-
-//EX4
-
-
-
+// const Child = () => {
+//   let[name,subject,salary]= props ;
+//   return (
+//     <div>
     
+//       <h1>{name}</h1>
+//       <h1>{subject}</h1>
+//       <h1>{salary}</h1>
+//     </div>
+//   );
+// };
 
-
-
-
+// export default Child;
 

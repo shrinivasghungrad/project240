@@ -1,4 +1,4 @@
-body{
+/* body{
     
     justify-content: center;
     display: flex;
@@ -13,7 +13,7 @@ body{
     height: 50px;
 
 } */
-#btn{
+/* #btn{
     color: white;
     background-color: red;
     border: none;
@@ -39,4 +39,27 @@ td{
     
     padding: 20px;
     border: 2px solid yellow;
-}
+} */ 
+ #btn{
+    background-color: red;
+    border: navajowhite;
+    height: 100px;
+    width: 50px;
+    color: white;
+ }
+ section{
+    background-color: green;
+ }
+ #btn1{
+    background-color: 
+    green;
+    color: white;
+ }
+ #btn2{
+    background-color: red;
+    color: white;
+ }
+ #btn3{
+    background-color: black;
+    color: white;
+ }
