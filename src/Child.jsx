@@ -327,3 +327,125 @@
 
 // export default Child;
 
+
+
+//below faker example
+
+// import { faker } from '@faker-js/faker'
+// import React, { useState } from 'react'
+
+
+// const Child = () => {
+//     let [state,setState]= useState(faker.image.avatar());
+//     let[value,setValue]= useState("");
+
+//     let changeImage=()=>{
+//         setState(faker.image.avatarLegacy());
+//     };
+
+//     let changeName=()=>{
+//         setValue(faker.animal.cat());
+//     };
+
+//  return (
+//     <div>
+//         <h1>{"my name is ....."+value}</h1>
+//         <img src={state} alt={"hello"} />
+//         <button onClick={changeImage}>changeImage</button>
+//         <button onClick={changeName}>changeName</button>
+//     </div>
+//   );
+// };
+
+// export default Child;
+
+//faker js end
+
+
+//below start example of props drilling props drilling means sending data from parent chuld and child its child 
+//in below exaple we pass data from app.jsx to child.jsx and from child.jsx to footer.jsx by using props
+
+// 1st way
+
+// import React from 'react'
+// import Footer from './Footer';
+// import './style.css';
+
+// const Child = (props) => {
+//   return (
+//     <div>
+//         <h1>{props.username}</h1>
+//         <h1>{props.subject}</h1>
+//         <Footer name="shri" subject="java"/>
+//     </div>
+//   );
+// };
+
+// export default Child;
+
+//end 1st way
+//
+//2nd way start
+// import React from 'react'
+
+// const Child = ({username,subject}) => {
+//   return (
+//     <div>
+//         <h1>{username}</h1>
+//         <h1>{subject}</h1>
+//     </div>
+//   );
+// };
+
+// export default Child;
+//end 2nd way
+
+//new example of sending data from parent to child in below exaple we send data frpm app.jsx tochild.jsx we send stste,json,
+
+// import React from 'react'
+
+// const Child = props => {
+//   return (
+//     <div>
+//         <section>
+//             <article>
+//                 {props.JSON.map (m=>{
+//                     console.log(m);
+//                     return(
+//                         <>
+//                         <h1>{m.maker}</h1>
+//                         <img src={m.img} alt={"hello"} />
+//                         <h1>{m.id}</h1>
+//                         </>
+//                     );
+//                 })}
+//             </article>
+//         </section>
+//         <main>{props.state.fullstack}</main>
+//     </div>
+//   )
+// }
+
+// export default Child;
+//end exaple
+
+// below event handler by class based component
+
+import React, { Component } from 'react'
+
+export default class Child extends Component {
+
+    click=()=>{
+        console.log("hi am click event");
+    
+    console.log(" hi am idiot fellow");
+};
+  render() {
+    return (
+      <div>
+        <button onClick={this.click}>click me</button>
+      </div>
+    );
+  }
+}
+//event handler by class based comopnent end

@@ -130,3 +130,106 @@
 // }
 // };
 
+
+
+
+// 
+//below faker example
+
+// import React, { Component } from 'react'
+// import Child from './Child'
+
+
+// export default class App extends Component {
+//   render() {
+//     return (
+//       <div>
+//         <Child/>
+//       </div>
+//     )
+//   };
+// };
+// //faker js end
+
+//below start example of props drilling props drilling means sending data from parent chuld and child its child 
+//in below exaple we pass data from app.jsx to child.jsx and from child.jsx to footer.jsx by using props
+
+//1st way
+
+// import React from 'react'
+// import Child from './Child';
+
+// const App = () => {
+//   return (
+//     <div>
+//       <Child username="yashraj" subject="react" />
+//     </div>
+//   );
+// };
+
+// export default App;
+//end 1st way
+
+//2nd way start
+// import React from 'react'
+// import Child from './Child';
+
+// const App = () => {
+//   return (
+//     <div>
+//       <Child username="yashraj" subject="react" />
+//     </div>
+//   );
+// };
+
+// export default App;
+//end 2nd way
+
+
+
+//new example of sending data from parent to child in below exaple we send data frpm app.jsx tochild.jsx we send stste,json,
+
+// import React from 'react';
+// import { useState } from 'react';
+// import Child from './Child';
+// import JSON from './products.json';
+// const App = () => {
+//     let [state, setState]= useState({
+
+//         Mernstack:["html","css","javascript"],
+//         fullstack:["sql","java"],
+
+//     });
+//     let changeName=username=>{
+//         return username;
+//     };
+
+//   return (
+//     <div>
+// <Child changeName={changeName} JSON={JSON}
+//  state={state}/>
+
+//     </div>
+//   );
+// };
+
+// export default App;
+//end exaple
+
+
+// below event handler by class based component
+
+import React, { Component } from 'react'
+import Child from './Child';
+
+export default class App extends Component {
+  render() {
+    return (
+        
+      <div>
+        <Child/>
+      </div>
+    );
+  }
+};
+//event handler by class based comopnent end
